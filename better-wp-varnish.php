@@ -110,10 +110,8 @@ if ( ! class_exists( 'bit51_bwpv' )) {
 					'meta' => false // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
 				) );
 
-				if ( is_page() || is_single() ) {
+				if ( isset( $post->ID ) && $post->ID ) {
 					$id = $post->ID;
-				} elseif ( is_home() ) {
-					$id = 'front';
 				} else {
 					$id = false;
 				}
@@ -193,7 +191,7 @@ if ( ! class_exists( 'bit51_bwpv' )) {
 
 			
 			$url = get_permalink( $postid );
-			$link = str_replace( get_bloginfo( 'wpurl' ), '', $url );
+			$link = str_replace( home_url(), '', $url );
 			
 			$success = $this->purgeVarnish( $link );
 			$success = $this->purgeVarnish( $link . 'page/(.*)' );

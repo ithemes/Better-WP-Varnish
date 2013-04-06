@@ -191,7 +191,7 @@ if ( ! class_exists( 'bit51_bwpv' )) {
 
 			
 			$url = get_permalink( $postid );
-			$link = str_replace( get_bloginfo( 'wpurl' ), '', $url );
+			$link = str_replace( home_url(), '', $url );
 			
 			$success = $this->purgeVarnish( $link );
 			$success = $this->purgeVarnish( $link . 'page/(.*)' );

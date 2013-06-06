@@ -1,11 +1,11 @@
 
 
 === Better WP Varnish ===
-Contributors: Bit51
+Contributors: Bit51, ChrisWiegman
 Donate link: http://bit51.com/software/better-wp-varnish/
 Tags: varnish, cache, performance
 Requires at least: 3.5
-Tested up to: 3.5.1
+Tested up to: 3.6
 Stable tag: 0.0.2
 
 The easiest way to maintain your varnish cache.
@@ -51,6 +51,12 @@ Better WP Varnish is based off of an old plugin called Varnish as a Service and 
 1. Configuration is a piece of cake and you can clear your cache from anywhere in your site.
 
 == Changelog ==
+
+= Dev =
+* Minor refactoring
+* Better error handling
+* Typo correction
+* No more messages when cache is cleared successfully
 
 = 0.0.2 =
 * Fixed Bit51 feed with improved error handling

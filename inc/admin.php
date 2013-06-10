@@ -119,7 +119,7 @@ if (!class_exists( 'bwpv_admin' ) ) {
 		 * Create admin page main content
 		 */
 		function general_options() {
-
+			global $bwpvoptions;
 			?>
 			<form method="post" action="options.php">
 			<?php settings_fields( 'bit51_bwpv_options' ); //use main settings group ?>
@@ -128,7 +128,7 @@ if (!class_exists( 'bwpv_admin' ) ) {
 						<td>
 							<input type="checkbox" name="bit51_bwpv[enabled]" id="enabled" value="1" <?php if ( $bwpvoptions['enabled'] == 1 ) echo "checked"; ?> /> <label for="buffer"><?php _e( 'Enable Varnish Cache Purge', $this->hook ); ?></label><br />
 							<label for"address"><?php _e( 'Server Address', $this->hook ); ?></label> <input name="bit51_bwpv[address]" id="header" value="<?php echo $bwpvoptions['address']; ?>" type="text"><br />
-							<label for"port"><?php _e( 'Server Address', $this->hook ); ?></label> <input name="bit51_bwpv[port]" id="port" value="<?php echo $bwpvoptions['port']; ?>" type="text"><br />
+							<label for"port"><?php _e( 'Server Port', $this->hook ); ?></label> <input name="bit51_bwpv[port]" id="port" value="<?php echo $bwpvoptions['port']; ?>" type="text"><br />
 						</td>
 					</tr>
 				</table>

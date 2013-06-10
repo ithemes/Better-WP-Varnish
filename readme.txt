@@ -57,6 +57,7 @@ Better WP Varnish is based off of an old plugin called Varnish as a Service and 
 * Better error handling
 * Typo correction
 * No more messages when cache is cleared successfully
+* Fixed options display
 
 = 0.0.2 =
 * Fixed Bit51 feed with improved error handling

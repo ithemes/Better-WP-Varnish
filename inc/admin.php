@@ -35,7 +35,7 @@ if (!class_exists( 'bwpv_admin' ) ) {
 		 */
 		function register_settings_page() {
 
-			add_options_page( __( $this->pluginname, $this->hook ), __( $this->pluginname, $this->hook ), $this->accesslvl, $this->hook, array( $this,'bwpv_admin_init' ) );
+			add_options_page( $this->pluginname, $this->pluginname, $this->accesslvl, $this->hook, array( $this,'bwpv_admin_init' ) );
 
 		}	
 		
@@ -48,15 +48,15 @@ if (!class_exists( 'bwpv_admin' ) ) {
 			global $bwpv_error;
 
 			if ( is_wp_error( $bwpv_error ) ) {
-				echo '<div id="message" class="error"><p>' . __( 'ERROR: Could not clear cache. Contact your server administrator if this error persists.', $this->hook ) . '</p></div>';		
+				echo '<div id="message" class="error"><p>' . __( 'ERROR: Could not clear cache. Contact your server administrator if this error persists.', 'better_wp_varnish' ) . '</p></div>';		
 			}
 
-			$this->admin_page( $this->pluginname . ' ' . __( 'Options', $this->hook ), 
+			$this->admin_page( $this->pluginname . ' ' . __( 'Options', 'better_wp_varnish' ), 
 
 				array(
 
-					array( __( 'Instructions', $this->hook), 'install_instructions' ), //primary admin page content
-					array( __( 'General Options', $this->hook), 'general_options' ), //primary admin page content
+					array( __( 'Instructions', 'better_wp_varnish' ), 'install_instructions' ), //primary admin page content
+					array( __( 'General Options', 'better_wp_varnish' ), 'general_options' ), //primary admin page content
 
 				)
 
@@ -69,7 +69,7 @@ if (!class_exists( 'bwpv_admin' ) ) {
 		 */
 		function install_instructions() {
 			?>
-			<p><?php _e( 'Simply enter your varnish server address and port below and select enable. Caches will automatically be cleared where appropriate (new content, comments, etc) and you can manually clear your cache via the admin bar. Please note that messages will only diplay when there is an error. You can confirm the cache has been cleared by looking for "varnish-cleared" at the end of the URL when manually clearing the cache or if there is no error message for all other occasions.', $this->hook ); ?></p>
+			<p><?php _e( 'Simply enter your varnish server address and port below and select enable. Caches will automatically be cleared where appropriate (new content, comments, etc) and you can manually clear your cache via the admin bar. Please note that messages will only diplay when there is an error. You can confirm the cache has been cleared by looking for "varnish-cleared" at the end of the URL when manually clearing the cache or if there is no error message for all other occasions.', 'better_wp_varnish' ); ?></p>
 			<?php
 		}
 
@@ -126,13 +126,13 @@ if (!class_exists( 'bwpv_admin' ) ) {
 				<table class="form-table">
 					<tr valign="top">
 						<td>
-							<input type="checkbox" name="bit51_bwpv[enabled]" id="enabled" value="1" <?php if ( $bwpvoptions['enabled'] == 1 ) echo "checked"; ?> /> <label for="buffer"><?php _e( 'Enable Varnish Cache Purge', $this->hook ); ?></label><br />
-							<label for"address"><?php _e( 'Server Address', $this->hook ); ?></label> <input name="bit51_bwpv[address]" id="header" value="<?php echo $bwpvoptions['address']; ?>" type="text"><br />
-							<label for"port"><?php _e( 'Server Port', $this->hook ); ?></label> <input name="bit51_bwpv[port]" id="port" value="<?php echo $bwpvoptions['port']; ?>" type="text"><br />
+							<input type="checkbox" name="bit51_bwpv[enabled]" id="enabled" value="1" <?php if ( $bwpvoptions['enabled'] == 1 ) echo "checked"; ?> /> <label for="buffer"><?php _e( 'Enable Varnish Cache Purge', 'better_wp_varnish' ); ?></label><br />
+							<label for"address"><?php _e( 'Server Address', 'better_wp_varnish' ); ?></label> <input name="bit51_bwpv[address]" id="header" value="<?php echo $bwpvoptions['address']; ?>" type="text"><br />
+							<label for"port"><?php _e( 'Server Port', 'better_wp_varnish' ); ?></label> <input name="bit51_bwpv[port]" id="port" value="<?php echo $bwpvoptions['port']; ?>" type="text"><br />
 						</td>
 					</tr>
 				</table>
-				<p class="submit"><input type="submit" class="button-primary" value="<?php _e( 'Save Changes' ) ?>" /></p>
+				<p class="submit"><input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'better_wp_varnish' ) ?>" /></p>
 			</form>
 			<?php
 		}

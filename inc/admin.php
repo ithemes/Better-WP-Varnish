@@ -48,7 +48,7 @@ if (!class_exists( 'bwpv_admin' ) ) {
 			global $bwpv_error;
 
 			if ( is_wp_error( $bwpv_error ) ) {
-				echo '<div id="message" class="error"><p>' . __( 'ERROR: Could not clear cache. Contact your server administrator if this error persists.', 'better_wp_varnish' ) . '</p></div>';		
+				echo '<div id="message" class="error"><p>' . __( 'ERROR: Could not clear the Varnish cache. Please check your settings below and contact your server administrator if this error persists.', 'better_wp_varnish' ) . '</p></div>';		
 			}
 
 			$this->admin_page( $this->pluginname . ' ' . __( 'Options', 'better_wp_varnish' ), 
@@ -100,15 +100,15 @@ if (!class_exists( 'bwpv_admin' ) ) {
 
 				} else {
 
-					$returnaddr = esc_url( $_GET['return'] );
-					
-					if ( strpos( $returnaddr, '?' ) === false ) {
-						$sep = '?';
+					if ( strpos( $_SERVER['HTTP_REFERER'], '?' ) === false && strpos( $_SERVER['HTTP_REFERER'], 'varnish-cleared' ) === false ) {
+						$cleared = '?varnish-cleared';
+					} else if ( strpos( $_SERVER['HTTP_REFERER'], 'varnish-cleared' ) === false ) {
+						$cleared = '&varnish-cleared';
 					} else {
-						$sep = '&';
+						$cleared = '';
 					}
 
-					wp_redirect( $_GET['return'] . $sep . 'varnish-cleared', 301 );
+					wp_safe_redirect( esc_url_raw( $_SERVER['HTTP_REFERER'] . $cleared ), 301 );
 				}
 
 			}

@@ -123,7 +123,7 @@ if ( ! class_exists( 'bit51_bwpv' )) {
 						'parent' => 'bwpv', // use 'false' for a root menu, or pass the ID of the parent menu
 						'id' => 'bwpv-cp', // link ID, defaults to a sanitized title value
 						'title' => __( 'Clear This Page', 'better_wp_varnish' ), // link title
-						'href' => admin_url( 'options-general.php?page=better-wp-varnish&flush=current&id=' . $id . '&_wpnonce=' . $nonce . '&return=' . $_SERVER['REQUEST_URI'] ), // name of file
+						'href' => admin_url( 'options-general.php?page=better-wp-varnish&flush=current&id=' . $id . '&_wpnonce=' . $nonce ), // name of file
 						'meta' => false // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
 					) );
 				}
@@ -132,7 +132,7 @@ if ( ! class_exists( 'bit51_bwpv' )) {
 					'parent' => 'bwpv', // use 'false' for a root menu, or pass the ID of the parent menu
 					'id' => 'bwpv-ca', // link ID, defaults to a sanitized title value
 					'title' => __( 'Clear All', 'better_wp_varnish' ), // link title
-					'href' => admin_url( 'options-general.php?page=better-wp-varnish&flush=all&id=' . ( $id === false ? 'opts' : $id ) . '&_wpnonce=' . $nonce . '&return=' . $_SERVER['REQUEST_URI'] ), // name of file
+					'href' => admin_url( 'options-general.php?page=better-wp-varnish&flush=all&id=' . ( $id === false ? 'opts' : $id ) . '&_wpnonce=' . $nonce ), // name of file
 					'meta' => false // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
 				) );
 
@@ -146,8 +146,6 @@ if ( ! class_exists( 'bit51_bwpv' )) {
 		 * 
 		 **/
 		function purgeAll() {
-
-			$errorHandler = __( 'WordPress Core File Writing ignored.', 'better_wp_varnish' );
 			
 			if ( $this->purgeVarnish( '(.*)' ) == true ) {
 

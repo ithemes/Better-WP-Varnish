@@ -1,0 +1,188 @@
+# Copyright (C) 2013 Better WP Varnish
+# This file is distributed under the same license as the Better WP Varnish package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Better WP Varnish Dev\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/better-wp-varnish\n"
+"POT-Creation-Date: 2013-06-12 00:49:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. #-#-#-#-#  plugin.pot (Better WP Varnish Dev)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: better-wp-varnish.php:52
+msgid "Better WP Varnish"
+msgstr ""
+
+#: better-wp-varnish.php:110
+msgid "Varnish"
+msgstr ""
+
+#: better-wp-varnish.php:125
+msgid "Clear This Page"
+msgstr ""
+
+#: better-wp-varnish.php:134
+msgid "Clear All"
+msgstr ""
+
+#: inc/admin.php:51
+msgid ""
+"ERROR: Could not clear the Varnish cache. Please check your settings below "
+"and contact your server administrator if this error persists."
+msgstr ""
+
+#: inc/admin.php:54
+msgid "Options"
+msgstr ""
+
+#: inc/admin.php:58
+msgid "Instructions"
+msgstr ""
+
+#: inc/admin.php:59
+msgid "General Options"
+msgstr ""
+
+#: inc/admin.php:72
+msgid ""
+"Simply enter your varnish server address and port below and select enable. "
+"Caches will automatically be cleared where appropriate (new content, "
+"comments, etc) and you can manually clear your cache via the admin bar. "
+"Please note that messages will only diplay when there is an error. You can "
+"confirm the cache has been cleared by looking for \"varnish-cleared\" at the "
+"end of the URL when manually clearing the cache or if there is no error "
+"message for all other occasions."
+msgstr ""
+
+#: inc/admin.php:129
+msgid "Enable Varnish Cache Purge"
+msgstr ""
+
+#: inc/admin.php:130
+msgid "Server Address"
+msgstr ""
+
+#: inc/admin.php:131
+msgid "Server Port"
+msgstr ""
+
+#: inc/admin.php:135
+msgid "Save Changes"
+msgstr ""
+
+#: lib/bit51/bit51.php:98
+msgid "Settings"
+msgstr ""
+
+#: lib/bit51/bit51.php:337
+msgid "Need Help?"
+msgstr ""
+
+#: lib/bit51/bit51.php:361
+msgid "No news items, feed might be broken..."
+msgstr ""
+
+#: lib/bit51/bit51.php:378
+msgid "It appears as if the feed is currently down. Please try again later"
+msgstr ""
+
+#: lib/bit51/bit51.php:381
+msgid "The Latest from Bit51"
+msgstr ""
+
+#: lib/bit51/bit51.php:393
+msgid ""
+"Have you found this plugin useful? Please help support it's continued "
+"development with a donation of $20, $50, or even $100."
+msgstr ""
+
+#: lib/bit51/bit51.php:397
+msgid "Short on funds?"
+msgstr ""
+
+#: lib/bit51/bit51.php:401
+msgid "Rate"
+msgstr ""
+
+#: lib/bit51/bit51.php:401
+msgid " 5★'s on WordPress.org"
+msgstr ""
+
+#: lib/bit51/bit51.php:403
+msgid "Talk about it on your site and link back to the "
+msgstr ""
+
+#: lib/bit51/bit51.php:403
+msgid "plugin page."
+msgstr ""
+
+#: lib/bit51/bit51.php:405
+msgid "Tweet about it. "
+msgstr ""
+
+#: lib/bit51/bit51.php:409 lib/bit51/bit51.php:473
+msgid "Support This Plugin"
+msgstr ""
+
+#: lib/bit51/bit51.php:423
+msgid "Like Bit51 on Facebook"
+msgstr ""
+
+#: lib/bit51/bit51.php:425
+msgid "Follow Bit51 on Twitter"
+msgstr ""
+
+#: lib/bit51/bit51.php:427
+msgid "Circle Bit51 on Google+"
+msgstr ""
+
+#: lib/bit51/bit51.php:429
+msgid "Subscribe with RSS or Email"
+msgstr ""
+
+#: lib/bit51/bit51.php:433
+msgid "Bit51 on the Web"
+msgstr ""
+
+#: lib/bit51/bit51.php:473
+msgid "It looks like you've been enjoying"
+msgstr ""
+
+#: lib/bit51/bit51.php:473
+msgid ""
+"for at least 30 days. Would you consider a small donation to help support "
+"continued development of the plugin?"
+msgstr ""
+
+#: lib/bit51/bit51.php:473
+msgid "Rate it 5★'s"
+msgstr ""
+
+#: lib/bit51/bit51.php:473
+msgid "Tell Your Followers"
+msgstr ""
+
+#: lib/bit51/bit51.php:473
+msgid "Don't Bug Me Again"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://bit51.com/software/better-wp-varnish/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A better solution for clearing Varnish cache with WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bit51"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://bit51.com"
+msgstr ""

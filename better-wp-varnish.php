@@ -9,7 +9,7 @@
 	Author: Bit51
 	Author URI: http://bit51.com
 	License: GPLv2
-	Copyright 2012 Bit51.com (email: info@bit51.com)
+	Copyright 2012 - 2013 Bit51.com (email: info@bit51.com)
 */
 
 

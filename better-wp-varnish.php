@@ -3,7 +3,7 @@
 	Plugin Name: Better WP Varnish
 	Plugin URI: http://bit51.com/software/better-wp-varnish/
 	Description: A better solution for clearing Varnish cache with WordPress
-	Version: Dev
+	Version: 1.0
 	Text Domain: better-wp-varnish
 	Domain Path: /languages
 	Author: Bit51
